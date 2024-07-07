@@ -168,6 +168,58 @@ def cane():
             log_key_press('sleep', sleep_duration)
             sleep(sleep_duration)
             times = 0
+def coco():
+    pyautogui.mouseDown()
+    times = 0
+    while True:
+        while times < 31:
+            duration = random.uniform(14.8, 15.5)
+            pyautogui.keyDown('s')
+            sleep(duration)
+            pyautogui.keyUp('s')
+            log_key_press('s', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(0.2, 0.4)
+            pyautogui.keyDown('a')
+            sleep(duration)
+            pyautogui.keyUp('a')
+            log_key_press('a', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(14.5, 14.8)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+
+            duration = random.uniform(0.2, 0.4)
+            pyautogui.keyDown('a')
+            sleep(duration)
+            pyautogui.keyUp('a')
+            log_key_press('a', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+
+            times += 1
+        else:
+            pyautogui.mouseUp()
+            pyautogui.keyUp('w')
+            pyautogui.keyUp('a')
+            pyautogui.keyUp('s')
+            sleep_duration = random.uniform(3, 4)
+            log_key_press('sleep', sleep_duration)
+            sleep(sleep_duration)
+            pyautogui.press('t')
+            pyautogui.press('up')
+            pyautogui.press('enter')
+            sleep_duration = random.uniform(1, 2)
+            log_key_press('sleep', sleep_duration)
+            sleep(sleep_duration)
+            pyautogui.press('shift')
+            pyautogui.mouseDown()
+            times = 0
+
 def clear_console():
     if os.name == 'nt':  # For Windows
         os.system('cls')
@@ -196,7 +248,7 @@ def logo():
 logo()
 print(Fore.CYAN + "Hypixel Skyblock Garden Macros Made By WST\n")
 
-farmpicked = input(Fore.CYAN + " 1 | MELON / PUMPKIN\n 2 | WHEAT / CARROT / NETHER WART / POTATOES\n 3 | CANE\n 4 | LEFT\n")
+farmpicked = input(Fore.CYAN + " 1 | MELON / PUMPKIN\n 2 | WHEAT / CARROT / NETHER WART / POTATOES\n 3 | CANE\n 4 | LEFT\n 5 | COCO\n")
 print(farmpicked)
 
 if int(farmpicked) == 1:
@@ -254,6 +306,21 @@ if int(farmpicked) == 4:
         sleep(3)
         money = 0
         thread1 = threading.Thread(target=left)
+        thread2 = threading.Thread(target=output)
+        thread1.start()
+        thread2.start()
+        thread1.join()
+        thread2.join()
+if int(farmpicked) == 5:
+    farmprofit = 289
+    clear_console()
+    logo()
+    print(Fore.CYAN + "Farm Picked: COCO")
+    start = input(Fore.GREEN + "\nPress ENTER To Start Then Tab Back To Minecraft")
+    if start == '':
+        sleep(3)
+        money = 0
+        thread1 = threading.Thread(target=coco)
         thread2 = threading.Thread(target=output)
         thread1.start()
         thread2.start()
