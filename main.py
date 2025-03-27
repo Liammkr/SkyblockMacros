@@ -80,6 +80,157 @@ def melon():
             log_key_press('sleep', sleep_duration)
             sleep(sleep_duration)
             times = 0
+def newmelon():
+    times = 0
+    pyautogui.mouseDown()
+    while True:
+        while times < 4:
+            duration = random.uniform(72, 73)
+            pyautogui.keyDown('a')
+            sleep(duration)
+            pyautogui.keyUp('a')
+            log_key_press('a', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(0.4, 0.75)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(72, 73)
+            pyautogui.keyDown('d')
+            sleep(duration)
+            pyautogui.keyUp('d')
+            log_key_press('d', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(0.4, 0.75)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            times += 1
+        else:
+            sleep_duration = random.uniform(5, 10)
+            log_key_press('sleep', sleep_duration)
+            sleep(sleep_duration)
+            times = 0
+def cact():
+    times = 0
+    pyautogui.mouseDown()
+    duration = random.uniform(0.4, 0.75)
+    pyautogui.keyDown('w')
+    sleep(duration)
+    pyautogui.keyUp('w')
+    log_key_press('w', duration)
+    log_money(round(((farmprofit * 10) * duration)))
+    while True:
+        while times < 11:
+            duration = random.uniform(29, 30)
+            pyautogui.keyDown('a')
+            sleep(duration)
+            pyautogui.keyUp('a')
+            log_key_press('a', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(0.4, 0.75)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(29, 30)
+            pyautogui.keyDown('d')
+            sleep(duration)
+            pyautogui.keyUp('d')
+            log_key_press('d', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(0.4, 0.75)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            times += 1
+        else:
+            sleep_duration = random.uniform(5, 10)
+            log_key_press('sleep', sleep_duration)
+            sleep(sleep_duration)
+            duration = random.uniform(0.4, 0.75)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            times = 0
+def mushroom():
+    pyautogui.mouseDown()
+    while True:
+            duration = random.uniform(96, 97)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(99, 100)
+            pyautogui.keyDown('s')
+            sleep(duration)
+            pyautogui.keyUp('s')
+            log_key_press('s', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(97, 98)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(97, 98)
+            pyautogui.keyDown('s')
+            sleep(duration)
+            pyautogui.keyUp('s')
+            log_key_press('s', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(97, 98)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(97, 98)
+            pyautogui.keyDown('s')
+            sleep(duration)
+            pyautogui.keyUp('s')
+            log_key_press('s', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(98, 99)
+            pyautogui.keyDown('w')
+            sleep(duration)
+            pyautogui.keyUp('w')
+            log_key_press('w', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            duration = random.uniform(99, 100)
+            pyautogui.keyDown('s')
+            sleep(duration)
+            pyautogui.keyUp('s')
+            log_key_press('s', duration)
+            log_money(round(((farmprofit * 10) * duration)))
+            
+            sleep_duration = random.uniform(5, 10)
+            log_key_press('sleep', sleep_duration)
+            sleep(sleep_duration)
 def wcnp():
     pyautogui.mouseDown()
     pyautogui.keyDown('w')
@@ -248,7 +399,7 @@ def logo():
 logo()
 print(Fore.CYAN + "Hypixel Skyblock Garden Macros Made By WST\n")
 
-farmpicked = input(Fore.CYAN + " 1 | MELON / PUMPKIN\n 2 | WHEAT / CARROT / NETHER WART / POTATOES\n 3 | CANE\n 4 | LEFT\n 5 | COCO\n")
+farmpicked = input(Fore.CYAN + " 1 | MELON / PUMPKIN\n 2 | WHEAT / CARROT / NETHER WART / POTATOES\n 3 | CANE\n 4 | LEFT\n 5 | COCO\n 6 | CACTUS\n 7 | MUSHROOM\n")
 print(farmpicked)
 
 if int(farmpicked) == 1:
@@ -260,7 +411,7 @@ if int(farmpicked) == 1:
     if start == '':
         sleep(3)
         money = 0
-        thread1 = threading.Thread(target=melon)
+        thread1 = threading.Thread(target=newmelon)
         thread2 = threading.Thread(target=output)
         thread1.start()
         thread2.start()
@@ -321,6 +472,36 @@ if int(farmpicked) == 5:
         sleep(3)
         money = 0
         thread1 = threading.Thread(target=coco)
+        thread2 = threading.Thread(target=output)
+        thread1.start()
+        thread2.start()
+        thread1.join()
+        thread2.join()
+if int(farmpicked) == 6:
+    farmprofit = 289
+    clear_console()
+    logo()
+    print(Fore.CYAN + "Farm Picked: CACT")
+    start = input(Fore.GREEN + "\nPress ENTER To Start Then Tab Back To Minecraft")
+    if start == '':
+        sleep(3)
+        money = 0
+        thread1 = threading.Thread(target=cact)
+        thread2 = threading.Thread(target=output)
+        thread1.start()
+        thread2.start()
+        thread1.join()
+        thread2.join()
+if int(farmpicked) == 7:
+    farmprofit = 289
+    clear_console()
+    logo()
+    print(Fore.CYAN + "Farm Picked: MUSHROOM")
+    start = input(Fore.GREEN + "\nPress ENTER To Start Then Tab Back To Minecraft")
+    if start == '':
+        sleep(3)
+        money = 0
+        thread1 = threading.Thread(target=mushroom)
         thread2 = threading.Thread(target=output)
         thread1.start()
         thread2.start()
